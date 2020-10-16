@@ -18,9 +18,9 @@ const StyledHomePageHeader = styled.div`
 
 
 .btn {
-    padding: .5%; 
+    padding: 10%; 
     font-size: 1.8rem; 
-    width: 100%; 
+    width: 150%; 
     cursor: pointer;
 }
 

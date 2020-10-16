@@ -19,7 +19,7 @@ const StyledPizzaFormPage = styled.div`
     flex-direction: column; 
     margin: 2%; 
     height: 80vh; 
-    width: 60%; 
+    width: 80%;
 }
 
 
@@ -29,13 +29,16 @@ const StyledPizzaFormPage = styled.div`
     align-items: center; 
     flex-direction: column; 
     text-align: center; 
-    width: 70%; 
+    width: 60%; 
+    border: 2px solid black; 
 }
 
 
-label {
-    margin: 7%; 
-    font-size: 1.6rem; 
+label { 
+    margin: 7% 0%; 
+    font-size: 2rem; 
+    width: 45%; 
+    text-align: center; 
 }
 
 .toppings {
@@ -46,20 +49,21 @@ label {
 }
 
 button {
-    margin: 8%; 
     width: 100%;
     cursor: pointer;
 }
 
-button:hover {
-    background: black; 
-    color: white; 
-}
+
 
 p {
     margin: 2%;
     color: red; 
 }
+
+h2 {
+    font-size: 3rem; 
+}
+
 
 `
 
@@ -71,7 +75,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
             <form onSubmit={onFormSubmit} className="container">
                 <div className="name">
                     <label>
-                        Name:
+                        <h3>Name</h3>
                         <input type="text" name="name"
                         onChange={onInputChange}
                         value={values.name}
@@ -81,7 +85,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
                     </label>
 
                     <label>
-                        Pizza Size:
+                        <h3>Pizza Size</h3>
                         <select name='pizzaSize'
                         onChange={onInputChange}
                         value={values.pizzaSize}>
