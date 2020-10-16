@@ -1,6 +1,5 @@
 import React from 'react'; 
 import styled from 'styled-components'; 
-import HomePageNav from './HomePageNav';
 import { Link } from 'react-router-dom'; 
 
 

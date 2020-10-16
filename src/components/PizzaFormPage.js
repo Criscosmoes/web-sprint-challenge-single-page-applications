@@ -64,21 +64,27 @@ p {
 `
 
 
-const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors}) => {
+const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSubmit}) => {
 
     return (
         <StyledPizzaFormPage>
-            <form className="container">
+            <form onSubmit={onFormSubmit} className="container">
                 <div className="name">
                     <label>
                         Name:
-                        <input type="text" name="name" onChange={onInputChange} value={values.name} /> 
+                        <input type="text" name="name"
+                        onChange={onInputChange}
+                        value={values.name}
+
+                           /> 
                         {errors.name.length !== 0 && <p>{errors.name}</p>}
                     </label>
 
                     <label>
                         Pizza Size:
-                        <select name='pizzaSize' onChange={onInputChange} value={values.pizzaSize}>
+                        <select name='pizzaSize'
+                        onChange={onInputChange}
+                        value={values.pizzaSize}>
                             <option>--select option--</option>
                             <option value="small">Small</option>
                             <option value="medium">Medium</option>
@@ -119,7 +125,9 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors}) => {
                     </label>
 
                     <Link to="/pizza/confirmation">
-                        <button type="submit" disabled={buttonDisabled}>Sumbit Pizza!</button>
+                        <button type="submit"
+                         disabled={buttonDisabled}
+                         >Sumbit Pizza!</button>
                     </Link>
                     
                 </div>

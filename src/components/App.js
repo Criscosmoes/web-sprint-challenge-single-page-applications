@@ -18,7 +18,7 @@ const App = () => {
         pineapple: false, 
         ham: false, 
         chicken: false,
-        special: ''
+        special: '',
     }
 
 
@@ -78,7 +78,7 @@ const App = () => {
 
 
     let formSchema = yup.object().shape({
-        name: yup.string().required('Please provide name').min(2, 'Name must be atleast 2 characters long'), 
+        name: yup.string().trim('cannot include leading and trailing spaces').strict(true).required('Please provide name').min(2, 'Name must be atleast 2 characters long'), 
 
         pizzaSize: yup.string().required('Please select a size').oneOf(['small', 'medium', 'large']),
 
@@ -122,7 +122,12 @@ const App = () => {
 
                 <Route path="/pizza" exact>
                     <HomePageNav />
-                    <PizzaFormPage onInputChange={onInputChange} values={values} buttonDisabled={buttonDisabled} errors={errors}/> 
+                    <PizzaFormPage 
+                    onInputChange={onInputChange}
+                    values={values}
+                    buttonDisabled={buttonDisabled}
+                    errors={errors}
+                    onFormSubmit={onFormSubmit}/> 
                 </Route>
 
                 <Route path="/pizza/confirmation">
