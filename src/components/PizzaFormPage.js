@@ -105,7 +105,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
                             <input type="checkbox"
                              name="pepperoni"
                              onChange={onInputChange}
-                             value={values.pepperoni} /> 
+                             checked={values.pepperoni} /> 
                             </label>
 
                             <label>
@@ -113,7 +113,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
                             <input type="checkbox"
                             name="pineapple"
                             onChange={onInputChange}
-                            value={values.pineapple} /> 
+                            checked={values.pineapple} /> 
                             </label>
 
                             <label>
@@ -121,7 +121,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
                             <input type="checkbox"
                              name="ham"
                              onChange={onInputChange}
-                             value={values.ham} /> 
+                             checked={values.ham} /> 
                             </label>
 
                             <label>
@@ -129,7 +129,7 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
                             <input type="checkbox"
                              name="chicken"
                              onChange={onInputChange}
-                             value={values.chicken} /> 
+                             checked={values.chicken} /> 
                             </label>
 
                         </div>
