@@ -102,22 +102,34 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
 
                             <label>
                             Pepperoni
-                            <input type="checkbox" name="pepperoni" onChange={onInputChange} value={values.pepperoni} /> 
+                            <input type="checkbox"
+                             name="pepperoni"
+                             onChange={onInputChange}
+                             value={values.pepperoni} /> 
                             </label>
 
                             <label>
                             Pineapple
-                            <input type="checkbox" name="pineapple" onChange={onInputChange} value={values.pineapple} /> 
+                            <input type="checkbox"
+                            name="pineapple"
+                            onChange={onInputChange}
+                            value={values.pineapple} /> 
                             </label>
 
                             <label>
                             Ham
-                            <input type="checkbox" name="ham" onChange={onInputChange} value={values.ham} /> 
+                            <input type="checkbox"
+                             name="ham"
+                             onChange={onInputChange}
+                             value={values.ham} /> 
                             </label>
 
                             <label>
                             Chicken
-                            <input type="checkbox" name="chicken" onChange={onInputChange} value={values.chicken} /> 
+                            <input type="checkbox"
+                             name="chicken"
+                             onChange={onInputChange}
+                             value={values.chicken} /> 
                             </label>
 
                         </div>
@@ -125,7 +137,10 @@ const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors, onFormSub
 
                     <label>
                         Special Instructions:
-                        <input type="text" name="special" onChange={onInputChange} value={values.special} /> 
+                        <input type="text"
+                         name="special"
+                         onChange={onInputChange}
+                         value={values.special} /> 
                     </label>
 
                     <Link to="/pizza/confirmation">
