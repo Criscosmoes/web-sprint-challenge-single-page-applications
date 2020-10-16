@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';  
+import styled from 'styled-components'; 
+import {Link} from 'react-router-dom';  
 
 
 const StyledPizzaFormPage = styled.div`
@@ -46,7 +47,7 @@ label {
 
 button {
     margin: 8%; 
-    width: 15%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -55,10 +56,15 @@ button:hover {
     color: white; 
 }
 
+p {
+    margin: 2%;
+    color: red; 
+}
+
 `
 
 
-const PizzaFormPage = ({onInputChange, values}) => {
+const PizzaFormPage = ({onInputChange, values, buttonDisabled, errors}) => {
 
     return (
         <StyledPizzaFormPage>
@@ -67,6 +73,7 @@ const PizzaFormPage = ({onInputChange, values}) => {
                     <label>
                         Name:
                         <input type="text" name="name" onChange={onInputChange} value={values.name} /> 
+                        {errors.name.length !== 0 && <p>{errors.name}</p>}
                     </label>
 
                     <label>
@@ -111,7 +118,9 @@ const PizzaFormPage = ({onInputChange, values}) => {
                         <input type="text" name="special" onChange={onInputChange} value={values.special} /> 
                     </label>
 
-                    <button type="submit">Sumbit Pizza!</button>
+                    <Link to="/pizza/confirmation">
+                        <button type="submit" disabled={buttonDisabled}>Sumbit Pizza!</button>
+                    </Link>
                     
                 </div>
             </form>
